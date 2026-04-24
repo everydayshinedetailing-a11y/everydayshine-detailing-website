@@ -1,55 +1,60 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Book Appointment</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book Appointment</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
+<header class="header">
   <div class="logo">EVERYDAY SHINE</div>
 </header>
 
 <section class="section">
   <div class="form-box">
-    <h2>Book Appointment</h2>
+    <h2>Request Appointment</h2>
 
-    <form name="booking" method="POST">
-      <input type="text" name="name" placeholder="Full Name" required>
-      <input type="tel" name="phone" placeholder="Phone Number" required>
-      <input type="email" name="email" placeholder="Email Address" required>
+    <form>
+      <div class="form-row">
+        <input type="text" placeholder="Full Name" required>
+        <input type="tel" placeholder="Phone Number" required>
+      </div>
 
-      <select name="service" required>
-        <option value="">Select Service</option>
-        <option>Maintenance Detail</option>
-        <option>Full Detail</option>
-        <option>Heavy Reset</option>
-      </select>
+      <input type="email" placeholder="Email Address" required>
 
-      <select name="condition" required>
-        <option value="">Vehicle Condition</option>
-        <option>Light</option>
-        <option>Moderate</option>
-        <option>Heavy</option>
-        <option>Severe</option>
-      </select>
+      <div class="form-row">
+        <select required>
+          <option>Select Service</option>
+          <option>Maintenance Detail</option>
+          <option>Full Detail</option>
+          <option>Heavy Reset</option>
+        </select>
 
-      <input type="date" name="date" required>
+        <select required>
+          <option>Vehicle Condition</option>
+          <option>Light</option>
+          <option>Moderate</option>
+          <option>Heavy</option>
+          <option>Severe</option>
+        </select>
+      </div>
 
-      <textarea name="notes" placeholder="Vehicle details, stains, pet hair, etc."></textarea>
+      <input type="date" required>
 
-      <button type="submit">Submit Request</button>
+      <textarea placeholder="Vehicle condition, stains, pet hair, etc."></textarea>
+
+      <button class="btn primary">Submit Request</button>
     </form>
 
-    <p style="font-size:12px; color:#aaa; margin-top:10px;">
-      A non-refundable deposit is required to secure your appointment.
+    <p class="disclaimer">
+      Non-refundable deposit required. Pricing subject to condition. Final price confirmed after inspection.
     </p>
   </div>
 </section>
 
-<div class="footer">
-  <p>© Everyday Shine Detailing</p>
-</div>
+<footer class="footer">© Everyday Shine Detailing</footer>
 
 </body>
 </html>

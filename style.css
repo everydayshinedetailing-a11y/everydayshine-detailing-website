@@ -1,47 +1,78 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BODY */
 body {
-  font-size: 48px;
+  font-family: Arial, sans-serif;
+  background: #0a0a0a;
+  color: white;
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  background: black;
+  border-bottom: 1px solid #222;
+}
+
+.logo {
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+nav a {
+  color: #aaa;
+  margin-left: 25px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+nav a:hover {
+  color: white;
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  background: url('assets/hero.jpg') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay {
+  background: rgba(0,0,0,0.7);
+  padding: 60px 20px;
+  text-align: center;
+  width: 100%;
+  max-width: 900px;
+}
+
+.hero h1 {
+  font-size: 52px;
   margin-bottom: 10px;
 }
 
-.hero-buttons {
-  margin-top: 20px;
+.hero p {
+  color: #ccc;
+  margin-bottom: 20px;
 }
 
-.section {
-  padding: 70px 40px;
-  max-width: 1100px;
-  margin: auto;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
-  gap: 25px;
-}
-
-.card {
-  background: #111;
-  padding: 25px;
-  border: 1px solid #222;
-  transition: 0.3s;
-}
-
-.card:hover {
-  border-color: #555;
-  transform: translateY(-5px);
-}
-
-.featured {
-  border: 1px solid white;
-}
-
+/* BUTTONS */
 .btn {
-  display: inline-block;
-  padding: 12px 20px;
+  padding: 12px 25px;
   border: 1px solid white;
   color: white;
   text-decoration: none;
-  margin-top: 10px;
+  margin: 5px;
+  display: inline-block;
 }
 
 .btn.primary {
@@ -49,46 +80,48 @@ body {
   color: black;
 }
 
-.cta {
+/* SECTION */
+.section {
+  max-width: 1200px;
+  margin: auto;
+  padding: 80px 20px;
   text-align: center;
-  padding: 60px;
-  background: #111;
 }
 
-.form-box {
-  max-width: 600px;
-  margin: auto;
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.card {
   background: #111;
   padding: 30px;
   border: 1px solid #222;
+  transition: 0.3s;
 }
 
-.form-row {
-  display: flex;
-  gap: 10px;
+.card:hover {
+  transform: translateY(-5px);
+  border-color: #555;
 }
 
-input, select, textarea {
-  width: 100%;
-  padding: 12px;
-  margin: 10px 0;
-  background: #000;
-  border: 1px solid #333;
-  color: white;
+/* CTA */
+.cta {
+  background: black;
+  padding: 80px 20px;
+  text-align: center;
 }
 
-textarea {
-  height: 100px;
+.cta h2 {
+  margin-bottom: 20px;
+  font-size: 32px;
 }
 
-.disclaimer {
-  font-size: 12px;
-  color: #aaa;
-}
-
+/* FOOTER */
 .footer {
   text-align: center;
   padding: 20px;
   border-top: 1px solid #222;
-  margin-top: 40px;
 }
